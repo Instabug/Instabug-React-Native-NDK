@@ -8,7 +8,7 @@
 
 This package is an add on to [Instabug-React-native](https://github.com/Instabug/Instabug-reactnative).
 
-It start capturing NDK crashes that will be sent to the dashboard.
+It start capturing NDK crashes that sent to the dashboard.
 
 
 
