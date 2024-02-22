@@ -1,57 +1,37 @@
 {
   "name": "instabug-reactnative-ndk",
   "version": "0.1.0",
-  "description": "eact Native plugin for integrating the Instabug SDK NDK",
+  "description": "React Native plugin for integrating the Instabug SDK NDK",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "files": [
-    "src",
-    "lib",
-    "android",
-    "ios",
-    "cpp",
-    "*.podspec",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
-  ],
   "scripts": {
-    "example": "yarn workspace instabug-reactnative-ndk-example",
-    "test": "jest",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
-    "prepare": "bob build",
-    "release": "release-it"
+    "lint": "eslint . --ignore-path .gitignore",
+    "lint:fix": "yarn lint --fix",
+    "lint:ci": "yarn lint --max-warnings=0",
+    "format": "prettier --check . --ignore-path .gitignore",
+    "format:fix": "prettier --write . --ignore-path .gitignore",
+    "build": "yarn build:lib && yarn build:cli",
+    "build:lib": "tsc"
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "instabug",
+    "debugging",
+    "errors",
+    "exceptions",
+    "logging",
+    "reporting",
+    "feedback",
+    "ndk"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://www.instabug.com/platforms/react-native.git"
-  },
-  "author": "Instabug (https://instabug.com) <aalaa@instabug.com> (https://www.instabug.com/platforms/react-native)",
+  "author": "Instabug (https://instabug.com)",
+  "repository": "github:Instabug/Instabug-React-Native",
+  "homepage": "https://www.instabug.com/platforms/react-native",
   "license": "MIT",
-  "bugs": {
-    "url": "https://www.instabug.com/platforms/react-native/issues"
-  },
-  "homepage": "https://www.instabug.com/platforms/react-native#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
+  "bugs": "https://github.com/Instabug/Instabug-React-Native/issues",
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
@@ -79,74 +59,8 @@
     "@types/react": "17.0.21"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
-  "workspaces": [
-    "example"
-  ],
-  "packageManager": "yarn@3.6.1",
-  "engines": {
-    "node": ">= 18.0.0"
-  },
-  "jest": {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
-  ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+    "react": ">=16.8.6",
+    "react-native": ">=0.60.0"
   },
   "react-native-builder-bob": {
     "source": "src",
