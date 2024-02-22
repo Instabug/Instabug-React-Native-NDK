@@ -6,9 +6,9 @@
 [![Twitter](https://img.shields.io/badge/twitter-@Instabug-blue.svg)](https://twitter.com/Instabug)
 [![Analytics](https://instabug-ga.appspot.com/UA-41982088-6/github/Instabug/instabug-reactnative?pixel)](https://instabug.com)
 
-This package is an add on to [Instabug-React-native](https://github.com/Instabug/Instabug-reactnative).
+This package is an add-on to [Instabug-React-native](https://github.com/Instabug/Instabug-reactnative).
 
-It start capturing NDK crashes that sent to the dashboard.
+It starts capturing NDK crashes that are sent to the dashboard.
 
 
 
