@@ -1,8 +1,8 @@
 # Instabug NDK Crash monitoring for React Native
 
-[![npm](https://img.shields.io/npm/v/instabug-reactnative.svg)](https://www.npmjs.com/package/instabug-reactnative-ndk)
-[![npm](https://img.shields.io/npm/dt/instabug-reactnative.svg)](https://www.npmjs.com/package/instabug-reactnative-ndk)
-[![npm](https://img.shields.io/npm/l/instabug-reactnative.svg)](https://github.com/Instabug/instabug-reactnative-ndk/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/instabug-reactnative-ndk.svg)](https://www.npmjs.com/package/instabug-reactnative-ndk)
+[![npm](https://img.shields.io/npm/dt/instabug-reactnative-ndk.svg)](https://www.npmjs.com/package/instabug-reactnative-ndk)
+[![npm](https://img.shields.io/npm/l/instabug-reactnative-ndk.svg)](https://github.com/Instabug/instabug-reactnative-ndk/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/badge/twitter-@Instabug-blue.svg)](https://twitter.com/Instabug)
 [![Analytics](https://instabug-ga.appspot.com/UA-41982088-6/github/Instabug/instabug-reactnative?pixel)](https://instabug.com)
 
